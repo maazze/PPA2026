@@ -1,0 +1,30 @@
+{
+  "name": "ppa2026",
+  "version": "1.0.0",
+  "description": "Primeiro programa para internet usando node + express",
+  "keywords": [
+    "http",
+    "express",
+    "node",
+    "PPI"
+  ],
+  "homepage": "https://github.com/maazze/PPA2026#readme",
+  "bugs": {
+    "url": "https://github.com/maazze/PPA2026/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maazze/PPA2026.git"
+  },
+  "license": "ISC",
+  "author": "Maria Azevedo",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
