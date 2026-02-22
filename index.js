@@ -13,29 +13,27 @@ server.get('/', (requisicao, resposta) => {
       <!DOCTYPE html>
       <html lang="pt-br">
       <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Reajuste Salarial</title>
-        <style>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Reajuste Salarial</title>
+      <style>
           .url-exemplo { color: #0066cc; }
-        </style>
+      </style>
       </head>
       <body>
         <h1>Calculadora de Reajuste Salarial</h1>
         <p>Para calcular o reajuste de um funcionário, informe os dados na URL do seu navegador conforme o exemplo abaixo:</p>
-
         <p class="url-exemplo">http://localhost:3000/?idade=18&amp;sexo=F&amp;salario_base=1700&amp;anoContratacao=2014&amp;matricula=12345</p>
-
         <h2>Parâmetros necessários:</h2>
-        <ul>
+      <ul>
           <li><b>idade</b> — número inteiro maior que 16</li>
           <li><b>sexo</b> — M (masculino) ou F (feminino)</li>
           <li><b>salario_base</b> — número real válido e positivo</li>
           <li><b>anoContratacao</b> — número inteiro maior que 1960</li>
           <li><b>matricula</b> — número inteiro maior que 0</li>
-        </ul>
+      </ul>
 
-        <h2>Reajustes por faixa etária:</h2>
+      <h2>Reajustes por faixa etária:</h2>
         <p>Faixa 18 a 39 anos — Masculino: reajuste de 10%, desconto de R$ 10,00 (até 10 anos) ou acréscimo de R$ 17,00 (mais de 10 anos)</p>
         <p>Faixa 18 a 39 anos — Feminino: reajuste de 8%, desconto de R$ 11,00 (até 10 anos) ou acréscimo de R$ 16,00 (mais de 10 anos)</p>
         <p>Faixa 40 a 69 anos — Masculino: reajuste de 8%, desconto de R$ 5,00 (até 10 anos) ou acréscimo de R$ 15,00 (mais de 10 anos)</p>
@@ -66,23 +64,23 @@ server.get('/', (requisicao, resposta) => {
       <!DOCTYPE html>
       <html lang="pt-br">
       <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Dados inválidos</title>
-        <style>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Dados inválidos</title>
+      <style>
           a { color: #0066cc; }
-        </style>
+      </style>
       </head>
       <body>
         <h1>Não foi possível calcular o reajuste</h1>
         <p>Os seguintes problemas foram encontrados nos dados informados:</p>
-        <ul>
+      <ul>
     `);
     for (var i = 0; i < erros.length; i++) {
       resposta.write('<li>' + erros[i] + '</li>');
     }
     resposta.write(`
-        </ul>
+      </ul>
         <a href="/">← Voltar e ver as instruções</a>
       </body>
       </html>
@@ -125,12 +123,12 @@ server.get('/', (requisicao, resposta) => {
     <!DOCTYPE html>
     <html lang="pt-br">
     <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Resultado — Matrícula ${matriculaNum}</title>
-      <style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado — Matrícula ${matriculaNum}</title>
+    <style>
         a { color: #0066cc; }
-      </style>
+    </style>
     </head>
     <body>
       <h1>Resultado do Reajuste Salarial</h1>
@@ -152,7 +150,7 @@ server.get('/', (requisicao, resposta) => {
       <h2>Novo salário reajustado: R$ ${novoSalario.toFixed(2)}</h2>
       <p>Aumento total de R$ ${diff.toFixed(2)} em relação ao salário base</p>
 
-      <a href="/">← Nova consulta</a>
+    <a href="/">← Nova consulta</a>
     </body>
     </html>
   `);
@@ -171,19 +169,18 @@ server.get('/', (requisicao, resposta) => {
       <!DOCTYPE html>
       <html lang="pt-br">
       <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Reajuste Salarial</title>
-        <style>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Reajuste Salarial</title>
+      <style>
           .url-exemplo { color: #0066cc; }
-        </style>
+      </style>
       </head>
       <body>
         <h1>Calculadora de Reajuste Salarial</h1>
         <p>Para calcular o reajuste de um funcionário, informe os dados na URL conforme o exemplo abaixo:</p>
-
         <p class="url-exemplo">http://localhost:3000/?idade=18&amp;sexo=F&amp;salario_base=1700&amp;anoContratacao=2014&amp;matricula=12345</p>
-
+        
         <h2>Parâmetros necessários:</h2>
         <ul>
           <li><b>idade</b> — número inteiro maior que 16</li>
@@ -224,23 +221,23 @@ server.get('/', (requisicao, resposta) => {
       <!DOCTYPE html>
       <html lang="pt-br">
       <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Dados inválidos</title>
-        <style>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Dados inválidos</title>
+      <style>
           a { color: #0066cc; }
-        </style>
+      </style>
       </head>
       <body>
         <h1>Não foi possível calcular o reajuste</h1>
         <p>Os seguintes problemas foram encontrados nos dados informados:</p>
-        <ul>
+      <ul>
     `);
     for (var i = 0; i < erros.length; i++) {
       resposta.write('<li>' + erros[i] + '</li>');
     }
     resposta.write(`
-        </ul>
+      </ul>
         <a href="/">← Voltar e ver as instruções</a>
       </body>
       </html>
@@ -256,12 +253,12 @@ server.get('/', (requisicao, resposta) => {
     <!DOCTYPE html>
     <html lang="pt-br">
     <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Resultado — Matrícula ${matriculaNum}</title>
-      <style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado — Matrícula ${matriculaNum}</title>
+    <style>
         a { color: #0066cc; }
-      </style>
+    </style>
     </head>
     <body>
       <h1>Resultado do Reajuste Salarial</h1>
@@ -283,7 +280,7 @@ server.get('/', (requisicao, resposta) => {
       <h2>Novo salário reajustado: R$ ${r.novoSalario.toFixed(2)}</h2>
       <p>Aumento total de R$ ${diff.toFixed(2)} em relação ao salário base</p>
 
-      <a href="/">← Nova consulta</a>
+    <a href="/">← Nova consulta</a>
     </body>
     </html>
   `);
