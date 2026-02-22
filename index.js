@@ -40,6 +40,59 @@ server.get('/horaAtual', (requisicao, resposta) => {
       `);
     });
 
+
+  // criar um método que aceita parâmetros
+   server.get('/tabuada', (requisicao, resposta) => {
+   // tabuada de qual número e até qual sequência
+   const numero = parseInt(requisicao.query.numero);
+   const sequencia = parseInt(requisicao.query.sequencia);
+   console.log("requisição tabuada:");
+   if (!numero || !sequencia){
+    resposta.send(`
+    <!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+    </head>
+    <body>
+    <h1>Por favor informe o número e a sequência</h1>
+    <h3>Exemplo: http://localhost:3000/tabuada?numero=9&sequencia=100</h3>
+    </body>
+    </html>
+      `);
+   }
+
+else{
+resposta.setHeader('Content-type','text/html');
+resposta.write(`
+<!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+    </head>
+    <body>
+    <h1>Tabuada do ${numero} até a sequencia ${sequencia}</h1>
+    <ul>
+  `);
+
+  for (let i=0; i<= sequencia;i++){
+    resposta.write(`<li>${i} x ${numero} = ${i * numero}</li>`);
+  }
+
+  resposta.write(`
+    </html>
+    </body>
+    </html>
+`);
+
+resposta.end(); //finaliza e envia
+}
+
+  });
 server.listen(porta, host, () => {
   console.log(`Servidor escutando em http://${host}:${porta}`);
 });
