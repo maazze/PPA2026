@@ -23,7 +23,7 @@ server.get('/', (requisicao, resposta) => {
       <body>
         <h1>Calculadora de Reajuste Salarial</h1>
         <p>Para calcular o reajuste de um funcionário, informe os dados na URL do seu navegador conforme o exemplo abaixo:</p>
-        <p class="url-exemplo">http://localhost:3000/?idade=18&amp;sexo=F&amp;salario_base=1700&amp;anoContratacao=2014&amp;matricula=12345</p>
+        <p class="url-exemplo">https://ppa-2026-v699.vercel.app/?idade=18&amp;sexo=F&amp;salario_base=1700&amp;anoContratacao=2014&amp;matricula=12345</p>
         <h2>Parâmetros necessários:</h2>
       <ul>
           <li><b>idade</b> — número inteiro maior que 16</li>
